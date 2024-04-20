@@ -22,5 +22,5 @@ class WSConsumer(AsyncWebsocketConsumer):
 
         for i in range(1000):
             day = next(self.day)
-            await self.send(json.dumps({'value': randint(-20, 20), "day": day}))
+            await self.send(json.dumps({'value': randint(0, 50), "day": day}))
             await sleep(1)
